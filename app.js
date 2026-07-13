@@ -162,6 +162,7 @@ const emojiToggle=document.querySelector('.emoji-toggle');
 const emojiTray=document.querySelector('.emoji-tray');
 let recorder,chunks=[],timer,timerStart,resumeMusic=false;
 let cloudUserId='';
+const messageHistoryStartsAt='2026-07-13T02:31:41Z';
 const supabaseReady=(async()=>{
   const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
   const client=createClient('https://dlkkxcdwkoqeguemifsz.supabase.co','sb_publishable_YqnhrxGTP7Avz65n_kKZFg_OEr2DFVa');
@@ -231,10 +232,10 @@ function showNotification(title,body){
 }
 async function renderTextMessages(){
   const client=await supabaseReady;if(!client)return;
-  const {data,error}=await client.from('text_messages').select('id,body,sender_name,user_id,created_at').order('created_at',{ascending:true}).limit(100);if(error)throw error;
+  const {data,error}=await client.from('text_messages').select('id,body,sender_name,user_id,created_at').gte('created_at',messageHistoryStartsAt).order('created_at',{ascending:true}).limit(100);if(error)throw error;
   messageList.innerHTML='';
   if(!data.length){messageList.innerHTML='<p class="empty-messages">Your first message can begin right here.</p>';return}
-  data.forEach(message=>{const item=document.createElement('article');item.className=`text-message${message.user_id===cloudUserId?' mine':''}`;const date=new Date(message.created_at);item.innerHTML='<header><strong></strong><time></time></header><p></p>';item.querySelector('strong').textContent=message.sender_name;item.querySelector('time').textContent=date.toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});item.querySelector('p').textContent=message.body;messageList.append(item)});
+  data.forEach(message=>{const item=document.createElement('article');item.className=`text-message${message.user_id===cloudUserId?' mine':''}`;const date=new Date(message.created_at);item.innerHTML='<div class="message-meta"><strong></strong><time></time></div><p></p>';item.querySelector('strong').textContent=message.sender_name;item.querySelector('time').textContent=date.toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});item.querySelector('p').textContent=message.body;messageList.append(item)});
   messageList.scrollTop=messageList.scrollHeight;
 }
 messageForm.addEventListener('submit',async event=>{
