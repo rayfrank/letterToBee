@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#110c1b" />
+  <title>Us, In Every Universe</title>
+  <meta name="description" content="A little universe made from our memories, our words, and our love." />
+  <link rel="canonical" href="https://rayfrank.github.io/letterToBee/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Our Little Universe" />
+  <meta property="og:title" content="Us, In Every Universe" />
+  <meta property="og:description" content="Coloring outside the lines, together. A little story made with love." />
+  <meta property="og:url" content="https://rayfrank.github.io/letterToBee/" />
+  <meta property="og:image" content="https://rayfrank.github.io/letterToBee/cartoon-coloring.png" />
+  <meta property="og:image:secure_url" content="https://rayfrank.github.io/letterToBee/cartoon-coloring.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1672" />
+  <meta property="og:image:height" content="942" />
+  <meta property="og:image:alt" content="A cartoon illustration of us coloring together while holding hands" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Us, In Every Universe" />
+  <meta name="twitter:description" content="Coloring outside the lines, together. A little story made with love." />
+  <meta name="twitter:image" content="https://rayfrank.github.io/letterToBee/cartoon-coloring.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="purple-theme.css" />
+  <style>.load-status{font-size:10px;letter-spacing:.12em;color:#ffffff88;text-align:center;max-width:280px;margin:0}</style>
+</head>
+<body>
+  <audio id="love-song" src="summerlove.mp3" preload="auto" autoplay loop playsinline></audio>
+  <div class="music-player" aria-label="Summer Love music player">
+    <button class="music-toggle" type="button" aria-label="Play Summer Love">▶</button>
+    <div class="music-details"><strong>Summer Love</strong><span>Our soundtrack</span></div>
+    <input class="music-progress" type="range" min="0" max="100" value="0" aria-label="Song progress">
+    <span class="music-time">0:00</span>
+    <button class="volume-toggle" type="button" aria-label="Mute music">♪</button>
+  </div>
+  <button class="autoplay-prompt" type="button" hidden><span>♪</span> Tap to play Summer Love</button>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header>
+    <a class="mark" href="#home" aria-label="Back to the beginning">R <span>♥</span> B</a>
+    <button class="sound muted" type="button" aria-label="Toggle ambient sound" title="Ambient sound">
+      <span></span><span></span><span></span><span></span>
+    </button>
+  </header>
+  <nav class="chapter-nav" aria-label="Story chapters">
+    <a href="#home" aria-label="Our beginning"><span>Beginning</span></a>
+    <a href="#together" aria-label="Creating together"><span>Together</span></a>
+    <a href="#journal" aria-label="Her journal"><span>Journal</span></a>
+    <a href="#message" aria-label="My message"><span>Message</span></a>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="eyebrow"><span></span> Our little universe</div>
+      <h1>Some moments<br><em>feel like forever.</em></h1>
+      <p class="intro">One photograph. A thousand memories. Move your cursor and watch our moment come alive.</p>
+      <button class="explore" type="button">Step into our story <b>↓</b></button>
+      <div class="counter"><strong>01</strong><i></i><span>02</span></div>
+    </section>
+
+    <section class="cartoon-scene" id="together">
+      <div class="cartoon-heading">
+        <div class="eyebrow"><span></span> Creating together</div>
+        <h2>Love is our favorite<br><em>work of art.</em></h2>
+      </div>
+      <figure class="cartoon-frame">
+        <div class="animated-couple" role="img" aria-label="An animation of us coloring, talking, and holding hands"></div>
+        <div class="kiss-couple" role="img" aria-label="An animation of us sharing a gentle kiss"></div>
+        <div class="character-dialogue" aria-hidden="true">
+          <span class="speech speech-her">I love you, hun <b>♥</b></span>
+          <span class="speech speech-him">I love you too, hun <b>♥</b></span>
+        </div>
+        <span class="spark spark-one">✦</span>
+        <span class="spark spark-two">✧</span>
+        <span class="pencil pencil-one"></span>
+        <span class="pencil pencil-two"></span>
+        <figcaption>Coloring outside the lines, together.</figcaption>
+      </figure>
+      <button class="talk-button" type="button"><span>●</span> Hear us talk</button>
+    </section>
+
+    <section class="journal-reveal reveal" id="journal">
+      <div class="journal-glow" aria-hidden="true"></div>
+      <div class="journal-copy">
+        <div class="eyebrow"><span></span> The words that stayed with me</div>
+        <h2>A page of your heart<br><em>I’ll always treasure.</em></h2>
+        <p>I’m grateful to have ever seen this part of your journal. Your words found a permanent home in my heart, and I’ll never take that gift for granted.</p>
+        <blockquote>“You always have me as your best friend, your boyfriend, and most of all, your heart.”</blockquote>
+        <button class="journal-zoom" type="button">Read the original page <b>↗</b></button>
+      </div>
+      <figure class="journal-page">
+        <span class="paper-label">From your journal · forever kept</span>
+        <img src="2.jpeg" alt="The exact handwritten journal pages she shared" loading="lazy">
+        <div class="paper-shine" aria-hidden="true"></div>
+      </figure>
+    </section>
+
+    <section class="message-story reveal" id="message">
+      <div class="message-heading">
+        <div class="eyebrow"><span></span> From my heart to yours</div>
+        <h2>All the words<br><em>I needed to say.</em></h2>
+        <p>Four pieces of one message. Take your time with every page.</p>
+      </div>
+      <div class="story-book reveal" aria-label="Interactive message journal">
+        <div class="book-spine" aria-hidden="true"></div>
+        <div class="book-page current-page">
+          <div class="page-front"><img src="note1.jpeg" alt="Page one of my message"></div>
+          <div class="page-back" aria-hidden="true"></div>
+        </div>
+        <div class="book-status"><span class="book-number">01</span><i></i><span>04</span></div>
+        <button class="book-arrow book-prev" type="button" aria-label="Previous journal page">←</button>
+        <button class="book-arrow book-next" type="button" aria-label="Next journal page">→</button>
+        <p class="swipe-hint">Swipe or use the arrows to turn each page</p>
+      </div>
+      <article class="final-letter">
+        <div><span>04 · The letter</span><h3>One last piece,<br>just for you.</h3><p>The complete letter is waiting here when you’re ready.</p></div>
+        <object data="letter.pdf" type="application/pdf" aria-label="The final letter">
+          <a href="letter.pdf" target="_blank" rel="noopener">Open the final letter</a>
+        </object>
+        <a class="pdf-link" href="letter.pdf" target="_blank" rel="noopener">Open letter full screen <b>↗</b></a>
+      </article>
+    </section>
+
+    <section class="voice-notes reveal" id="voice-notes">
+      <div class="voice-copy">
+        <div class="eyebrow"><span></span> A voice to keep</div>
+        <h2>Leave a little<br><em>piece of your voice.</em></h2>
+        <p>Record something sweet, a thought from today, or simply say “I love you.” New voice notes sync to both of you in real time.</p>
+      </div>
+      <div class="recorder-card">
+        <input class="voice-sender-name" type="text" maxlength="30" placeholder="Your name" aria-label="Your name for voice notes">
+        <div class="voice-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="record-time">00:00</div>
+        <button class="record-button" type="button" aria-label="Start recording"><span></span></button>
+        <p class="record-label">Tap to record a voice note</p>
+        <div class="recordings" aria-live="polite"></div>
+      </div>
+      <div class="shared-messages">
+        <div class="messages-head">
+          <div><span>Our little inbox</span><h3>Messages between us</h3></div>
+          <button class="notify-button" type="button"><i></i> Enable notifications</button>
+        </div>
+        <div class="message-list" aria-live="polite"><p>Loading our messages...</p></div>
+        <form class="message-form">
+          <input class="sender-name" type="text" maxlength="30" placeholder="Your name" aria-label="Your name" required>
+          <textarea class="message-input" maxlength="1000" rows="2" placeholder="Leave something from the heart..." aria-label="Your message" required></textarea>
+          <button class="emoji-toggle" type="button" aria-label="Open emoji tray">☺</button>
+          <div class="emoji-tray" hidden aria-label="Choose an emoji">
+            <button type="button">❤️</button><button type="button">🥰</button><button type="button">😘</button>
+            <button type="button">💕</button><button type="button">🥹</button><button type="button">😂</button>
+            <button type="button">🫶</button><button type="button">✨</button><button type="button">🐝</button>
+            <button type="button">💜</button><button type="button">😍</button><button type="button">🤗</button>
+          </div>
+          <button type="submit" aria-label="Send message">Send <b>♥</b></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="memory" id="memory">
+      <div class="memory-copy">
+        <div class="eyebrow"><span></span> A note from the heart</div>
+        <h2>Every love story<br>has its own <em>light.</em></h2>
+        <p>Ours lives in warm smiles, held hands, and all the quiet moments in between.</p>
+        <button class="letter-button" type="button">Open the letter <b>↗</b></button>
+      </div>
+      <div class="date">04 · 05 · 2026</div>
+    </section>
+
+    <section class="cinematic-final" id="forever">
+      <div class="final-stars" aria-hidden="true"></div>
+      <div class="final-kiss" aria-hidden="true"></div>
+      <div class="final-vignette" aria-hidden="true"></div>
+      <div class="final-copy reveal">
+        <div class="eyebrow"><span></span> In this universe and every one after</div>
+        <h2>Could we do this<br><em>for a lifetime?</em></h2>
+        <p>I love you so, so much, hun. May the oontz be with us always.</p>
+        <button class="replay-story" type="button">Replay our story <b>↟</b></button>
+      </div>
+    </section>
+  </main>
+
+  <div class="letter-modal" role="dialog" aria-modal="true" aria-label="A love letter" hidden>
+    <button class="close" aria-label="Close letter">×</button>
+    <div class="letter-card">
+      <img src="2.jpeg" alt="A handwritten love letter" />
+      <p>A small piece of our story, written by hand.</p>
+    </div>
+  </div>
+
+  <div class="loading" aria-live="polite"><div class="loading-mark">R <span>♥</span> B</div><div class="load-line"><i></i></div><p class="load-status">Creating our little universe…</p></div>
+
+  <script type="importmap">
+  {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}
+  </script>
+  <script>
+    window.finishLoading = function (message) {
+      var loader = document.querySelector('.loading');
+      if (message) document.querySelector('.load-status').textContent = message;
+      setTimeout(function () { loader.classList.add('done'); }, message ? 1600 : 300);
+    };
+    window.addEventListener('error', function () {
+      window.finishLoading('The 3D effect could not load. Showing the story instead.');
+    });
+    setTimeout(function () { window.finishLoading(); }, 6000);
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
