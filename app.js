@@ -162,7 +162,7 @@ const emojiToggle=document.querySelector('.emoji-toggle');
 const emojiTray=document.querySelector('.emoji-tray');
 let recorder,chunks=[],timer,timerStart,resumeMusic=false;
 let cloudUserId='';
-const messageHistoryStartsAt='2026-07-13T02:31:41Z';
+const messageHistoryStartsAt='2026-07-13T02:40:31Z';
 const supabaseReady=(async()=>{
   const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
   const client=createClient('https://dlkkxcdwkoqeguemifsz.supabase.co','sb_publishable_YqnhrxGTP7Avz65n_kKZFg_OEr2DFVa');
